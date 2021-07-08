@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counterapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class = 'wrapper'>
+
+        <div class="box-container">
+            <div class="box-items">
+                <h1 class="counter">COUNTER</h1><br />
+                <br />
+                <h1 class="default-num" id="default-val">0</h1><br />
+                <br />
+                <button class="lower-count" id="subtraction">LOWER COUNT</button><br />
+                <button class="add-count" id="addition">ADD COUNT</button><br />
+
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        // declaring my variable
+
+        let number = 0;
+        var defaultSub = 0;
+        let defaultNum = document.getElementById('default-val');
+        let lowerCount = document.getElementById('subtraction');
+        let addCount = document.getElementById('addition');
+
+        addCount.addEventListener('click', function () {
+            if(number < 50){
+                number++;
+                defaultNum.innerHTML = number;
+            }
+        });
+
+        lowerCount.addEventListener('click', function () {
+            if(number > 0){
+                number--;
+                defaultNum.innerHTML = number;
+            }
+        });
+
+    </script>
+    
+</body>
+</html>
+
